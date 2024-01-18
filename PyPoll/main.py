@@ -2,7 +2,7 @@ import csv
 import os
 
       #set path for read
-election_csv = os.path.join("/Users/mother/mod_3_challenge/python-challenge/PyPoll/Resources/election_data.csv")
+election_csv = os.path.join("Resources","election_data.csv")
       
  # Create variable to store total count and dict to store candidate info
 total_votes = 0
@@ -42,7 +42,7 @@ winner = max(candidate_tot, key=candidate_tot.get)
 print(f"\nWinner: {winner}\n")     
 print('_'*26)
 
-analysis_txt = open("/Users/mother/mod_3_challenge/python-challenge/PyPoll/analysis/analysis.txt", "w+")
+analysis_txt = open(os.path.join("analysis","analysis.txt"), "w+")
 analysis_txt.write(f"\nElection Results\n")
 analysis_txt.write("_" *26)
 analysis_txt.write(f"\nTotal Votes: {total_votes:,}\n")
